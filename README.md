@@ -60,3 +60,14 @@ public abstract class Buyer implements HumanBehaviour {
 
 
   ## QueueBehaviour
+
+  void takeInQueue(Buyer actor);    
+
+    void takeOrders();               // собрать все заказы с очереди
+
+    void giveOrders();               // отдать заказы
+
+    void releaseFromQueue();         // убрать человека с очереди
+}
+
+
