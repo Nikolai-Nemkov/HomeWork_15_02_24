@@ -41,7 +41,9 @@ public abstract class Buyer implements HumanBehaviour {
 ## Human
 
 public class Human extends Buyer {
+
     public Human(String name) {
+    
         super(name);
     }
 
