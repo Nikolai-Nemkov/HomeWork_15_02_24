@@ -6,47 +6,15 @@
 Формат сдачи: ссылка на гитхаб проект
 
 
-## QueueBehaviour
-
-public interface QueueBehaviour {
-
-    void takeInQueue(Buyer actor);    
-
-    void takeOrders();               // собрать все заказы с очереди
-
-    void giveOrders();               // отдать заказы
-
-    void releaseFromQueue();         // убрать человека с очереди
-}
-
-## Buyer
-
-public abstract class Buyer implements HumanBehaviour { 
-
-    protected String name;
-    protected boolean makeOrder;
-    protected boolean takeOrder;
-
-    public Buyer(String name) {
-        this.name = name;
-        makeOrder = false;
-        takeOrder = false;
-    }
-    public String getName() {
-        return name;
-    }
-}
-
-
 ## Human
 
-public class Human extends Buyer {
-
+ public class Human extends Buyer {
+ 
     public Human(String name) {
     
         super(name);
     }
-
+    
     @Override
     public void setMakeOrder(boolean makeOrder) {
         super.makeOrder = makeOrder;
@@ -68,3 +36,27 @@ public class Human extends Buyer {
     }
 }
 
+
+## Buyer
+
+public abstract class Buyer implements HumanBehaviour {
+
+    protected String name;
+    
+    protected boolean makeOrder;
+    
+    protected boolean takeOrder;
+
+    public Buyer(String name) {
+        this.name = name;
+        makeOrder = false;
+        takeOrder = false;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+
+  ## QueueBehaviour
