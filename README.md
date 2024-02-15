@@ -104,9 +104,11 @@ public abstract class Buyer implements HumanBehaviour {
 ## ShopBehaviour
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 public class Shop implements ShopBehaviour, QueueBehaviour {
+
     private List<Buyer> queue = new ArrayList<>();
 
     @Override
