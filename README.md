@@ -9,6 +9,7 @@
 ## QueueBehaviour
 
 public interface QueueBehaviour {
+
     void takeInQueue(Buyer actor);    
 
     void takeOrders();               // собрать все заказы с очереди
@@ -21,6 +22,7 @@ public interface QueueBehaviour {
 ## Buyer
 
 public abstract class Buyer implements HumanBehaviour { 
+
     protected String name;
     protected boolean makeOrder;
     protected boolean takeOrder;
